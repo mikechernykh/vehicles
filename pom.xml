@@ -16,6 +16,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <finalName>vehicles</finalName>
         <plugins>
@@ -35,7 +43,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>dev.chernykh.vehicles.VehiclesApplication</mainClass>
+                            <mainClass>dev.chernykh.VehiclesApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

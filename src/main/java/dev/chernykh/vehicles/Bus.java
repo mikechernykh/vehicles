@@ -1,5 +1,13 @@
 package dev.chernykh.vehicles;
 
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * Bus class extending the vehicle class.
+ */
+@Getter
+@Setter
 public class Bus extends Vehicle {
     private String purpose;
     private int seatsCount;
@@ -10,6 +18,9 @@ public class Bus extends Vehicle {
         this.seatsCount = seatsCount;
     }
 
+    /**
+     * Displaying unique characteristics of a bus.
+     */
     @Override
     public void getCharacteristics() {
         super.getCharacteristics();

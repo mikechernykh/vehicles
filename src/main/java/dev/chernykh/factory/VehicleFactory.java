@@ -1,8 +1,21 @@
-package dev.chernykh.vehicles;
+package dev.chernykh.factory;
 
+import dev.chernykh.vehicles.*;
+
+/**
+ * Factory class to build a vehicle by given type.
+ * If type doesn't recognize then VehicleTypeNotRecognizedException will be thrown.
+ */
 public class VehicleFactory {
 
-    public Vehicle createVehicle(String vehicleType) throws VehicleTypeNotFoundException {
+    /**
+     * Create a vehicle by given type.
+     *
+     * @param vehicleType a vehicle type
+     * @return a vehicle built according to the specified type
+     * @throws VehicleTypeNotRecognizedException if the type not recognized
+     */
+    public Vehicle createVehicle(String vehicleType) throws VehicleTypeNotRecognizedException {
         Vehicle vehicle;
 
         switch (vehicleType) {
@@ -19,7 +32,7 @@ public class VehicleFactory {
                 vehicle = new Bus("Автобус", 6, 160, "Городской", 95);
                 break;
             default:
-                throw new VehicleTypeNotFoundException();
+                throw new VehicleTypeNotRecognizedException("Vehicle type: " + vehicleType + " has not recognized");
         }
         return vehicle;
     }

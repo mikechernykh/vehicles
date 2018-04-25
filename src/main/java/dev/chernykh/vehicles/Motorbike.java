@@ -1,5 +1,13 @@
 package dev.chernykh.vehicles;
 
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * Motorbike class extending the vehicle class.
+ */
+@Getter
+@Setter
 public class Motorbike extends Vehicle {
     private String brakes;
     private String type;
@@ -10,6 +18,9 @@ public class Motorbike extends Vehicle {
         this.type = type;
     }
 
+    /**
+     * Displaying unique characteristics of a motorbike.
+     */
     @Override
     public void getCharacteristics() {
         super.getCharacteristics();

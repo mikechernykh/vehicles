@@ -1,5 +1,13 @@
 package dev.chernykh.vehicles;
 
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * Car class extending the vehicle class.
+ */
+@Getter
+@Setter
 public class Car extends Vehicle {
     private String transmissionType;
     private String carcass;
@@ -10,6 +18,9 @@ public class Car extends Vehicle {
         this.carcass = carcass;
     }
 
+    /**
+     * Displaying unique characteristics of a car.
+     */
     @Override
     public void getCharacteristics() {
         super.getCharacteristics();

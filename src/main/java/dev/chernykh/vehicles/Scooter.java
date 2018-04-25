@@ -1,5 +1,13 @@
 package dev.chernykh.vehicles;
 
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * Scooter class extending the vehicle class.
+ */
+@Getter
+@Setter
 public class Scooter extends Vehicle {
     private boolean hasAmortization;
     private boolean isElectric;
@@ -10,6 +18,9 @@ public class Scooter extends Vehicle {
         this.isElectric = isElectric;
     }
 
+    /**
+     * Displaying unique characteristics of a scooter.
+     */
     @Override
     public void getCharacteristics() {
         super.getCharacteristics();
