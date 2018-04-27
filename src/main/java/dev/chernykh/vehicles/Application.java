@@ -19,11 +19,12 @@ public class Application {
 
         for (String arg : args) {
             Integer vehicleType = tryParse(arg);
-            if (vehicleType == null) {
-                System.out.println("НЕИЗВЕСТНЫЙ ТИП ТРАНСПОРТА");
-            } else {
+
+            if (vehicleType != null && vehicleType >= 0 && vehicleType < VehicleType.values().length) {
                 vehicle = factory.createVehicle(VehicleType.values()[vehicleType]);
                 vehicle.print(System.out);
+            } else {
+                System.out.println("НЕИЗВЕСТНЫЙ ТИП ТРАНСПОРТА");
             }
             System.out.println();
         }

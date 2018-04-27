@@ -1,6 +1,5 @@
-package dev.chernykh.factory;
+package dev.chernykh.vehicles;
 
-import dev.chernykh.vehicles.*;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
