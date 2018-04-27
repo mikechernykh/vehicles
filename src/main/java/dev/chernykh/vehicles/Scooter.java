@@ -1,4 +1,4 @@
-package dev.chernykh;
+package dev.chernykh.vehicles;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,25 +12,25 @@ import java.io.PrintStream;
 @Setter
 public class Scooter extends Vehicle {
     private boolean amortization;
-    private boolean electric;
+    private boolean electricDrive;
 
-    public Scooter(int wheelsCount, int maxSpeed, boolean amortization, boolean electric) {
+    public Scooter(int wheelsCount, int maxSpeed, boolean amortization, boolean electricDrive) {
         super(wheelsCount, maxSpeed);
         this.amortization = amortization;
-        this.electric = electric;
+        this.electricDrive = electricDrive;
     }
 
     /**
      * Print common and unique characteristics of a scooter.
      */
     @Override
-    public void printCharacteristics(PrintStream out) {
-        super.printCharacteristics(out);
+    public void print(PrintStream out) {
+        super.print(out);
         out.println("Уникальные характеристики самоката");
         out.print("Наличие амортизаторов: ");
-        out.println(amortization ? "есть" : "нет");
-        out.print("Электрический: ");
-        out.println(electric ? "да" : "нет");
+        out.println(amortization ? "есть" : "отсутствуют");
+        out.print("Наличие электропривода: ");
+        out.println(electricDrive ? "есть" : "отсутствует");
     }
 
     @Override

@@ -1,4 +1,4 @@
-package dev.chernykh;
+package dev.chernykh.vehicles;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -24,8 +24,9 @@ public class Motorbike extends Vehicle {
      * Print common and unique characteristics of a motorbike.
      */
     @Override
-    public void printCharacteristics(PrintStream out) {
-        super.printCharacteristics(out);
+    public void print(PrintStream out) {
+        super.print(out);
+        out.println("Уникальные характеристики мотоцикла");
         out.print("Тормоза: ");
         out.println(brakes);
         out.print("Тип: ");

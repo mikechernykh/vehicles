@@ -1,4 +1,4 @@
-package dev.chernykh;
+package dev.chernykh.vehicles;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

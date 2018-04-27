@@ -1,4 +1,4 @@
-package dev.chernykh;
+package dev.chernykh.vehicles;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -11,7 +11,6 @@ import java.io.PrintStream;
 @Getter
 @Setter
 public class Car extends Vehicle {
-    private VehicleType vehicleType;
     private String transmissionType;
     private String carcass;
 
@@ -25,8 +24,8 @@ public class Car extends Vehicle {
      * Print common and unique characteristics of a car.
      */
     @Override
-    public void printCharacteristics(PrintStream out) {
-        super.printCharacteristics(out);
+    public void print(PrintStream out) {
+        super.print(out);
         out.println("Уникальные характеристики автомобиля");
         out.print("Тип трансмиссии: ");
         out.println(transmissionType);

@@ -1,36 +1,35 @@
-package dev.chernykh;
+package dev.chernykh.vehicles;
 
 /**
- * Factory class to build a vehicle by given motoClass.
- * If type doesn't recognize then VehicleTypeNotRecognizedException will be thrown.
+ * Factory class to build a vehicle by given type.
+ * If type doesn't recognize then IllegalStateException will be thrown.
  */
 public class VehicleFactory {
 
     /**
-     * Create a vehicle by given motoClass.
+     * Create a vehicle by given type.
      *
      * @param vehicleType a vehicle type
      * @return a vehicle built according to the specified type
-     * @throws VehicleTypeNotRecognizedException if the type not recognized
      */
-    public Vehicle createVehicle(String vehicleType) throws VehicleTypeNotRecognizedException {
+    public Vehicle createVehicle(VehicleType vehicleType) {
         Vehicle vehicle;
 
         switch (vehicleType) {
-            case "0":
+            case Motorbike:
                 vehicle = new Motorbike(2, 250, "Дисковые", "Спортивный");
                 break;
-            case "1":
+            case Scooter:
                 vehicle = new Scooter(2, 30, true, true);
                 break;
-            case "2":
+            case Car:
                 vehicle = new Car(4, 280, "Автомат", "Седан");
                 break;
-            case "3":
+            case Bus:
                 vehicle = new Bus(6, 160, "Городской", 95);
                 break;
             default:
-                throw new VehicleTypeNotRecognizedException("Vehicle motoClass: " + vehicleType + " has not recognized");
+                throw new IllegalStateException("Vehicle type: " + vehicleType + " has not recognized");
         }
         return vehicle;
     }

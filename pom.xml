@@ -24,6 +24,11 @@
             <version>1.16.20</version>
         </dependency>
         <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>23.2-jre</version>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
@@ -39,7 +44,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>dev.chernykh.VehiclesApplication</mainClass>
+                            <mainClass>dev.chernykh.vehicles.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -1,4 +1,4 @@
-package dev.chernykh;
+package dev.chernykh.vehicles;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -24,8 +24,8 @@ public class Bus extends Vehicle {
      * Print common and unique characteristics of a bus.
      */
     @Override
-    public void printCharacteristics(PrintStream out) {
-        super.printCharacteristics(out);
+    public void print(PrintStream out) {
+        super.print(out);
         out.println("Уникальные характеристики автобуса");
         out.print("Назначение: ");
         out.println(purpose);

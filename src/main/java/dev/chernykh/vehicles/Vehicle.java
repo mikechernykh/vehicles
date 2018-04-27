@@ -1,4 +1,4 @@
-package dev.chernykh;
+package dev.chernykh.vehicles;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -19,6 +19,13 @@ public abstract class Vehicle {
      * @param maxSpeed    max speed of a vehicle
      */
     Vehicle(int wheelsCount, int maxSpeed) {
+        if (wheelsCount < 0) {
+            throw new IllegalArgumentException("Кол-во колес не может быть отрицательным");
+        }
+        if (maxSpeed < 0) {
+            throw new IllegalArgumentException("Максимальная скорость не может быть отрицательной");
+        }
+
         this.wheelsCount = wheelsCount;
         this.maxSpeed = maxSpeed;
     }
@@ -26,7 +33,7 @@ public abstract class Vehicle {
     /**
      * Print common vehicle characteristics.
      */
-    public void printCharacteristics(PrintStream out) {
+    public void print(PrintStream out) {
         out.print("Наименование транспорта: ");
         out.println(this.getType().getTitle());
         out.print("Кол-во колес: ");
